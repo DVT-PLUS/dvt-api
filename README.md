@@ -1,4 +1,4 @@
-# dbt-api (Fastify + TypeScript) — Railway
+# dvt-api (Fastify + TypeScript) — Railway
 
 ## Local run
 
@@ -43,7 +43,7 @@ Use:
 4. Configura las variables de entorno en el panel de Render (usa `.env.example` como referencia):
    - `NODE_ENV=production`
    - `LOG_LEVEL=info`
-   - `SERVICE_NAME=dbf-api`
+   - `SERVICE_NAME=dvt-api`
    - `CORS_ORIGIN=*` (o tu dominio permitido)
    - Render inyecta automáticamente `PORT` y suele usar `HOST=0.0.0.0`
 5. El servicio se expondrá en el puerto que Render asigne (tu app ya lo soporta).
