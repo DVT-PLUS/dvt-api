@@ -4,7 +4,7 @@ import sensible from "@fastify/sensible";
 import cors from "@fastify/cors";
 
 import { loadEnv, type Env } from "./plugins/env.js";
-import { buildLogger } from "./plugins/logger.js";
+import { buildLoggerOptions } from "./plugins/logger.js";
 
 import { healthRoutes } from "./routes/health.js";
 import { versionRoutes } from "./routes/version.js";
@@ -17,7 +17,7 @@ export function buildApp(): { app: FastifyInstance; ctx: AppContext } {
   const env = loadEnv(process.env);
 
   const app = Fastify({
-    logger: buildLogger(env),
+    logger: buildLoggerOptions(env),
     ajv: {
       customOptions: {
         coerceTypes: "array",
